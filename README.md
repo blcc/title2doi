@@ -2,7 +2,7 @@
 A client access Crossref Metadata Search to translate article title/auth to doi.
 
 # Requirement
-python module: bs4, termcolor
+python module: bs4, termcolor(optional)
 
 # Usage
 ```

@@ -1,7 +1,10 @@
 #!/usr/bin/python
-import bs4,sys
-from termcolor import colored
-import urllib
+import bs4,sys,urllib
+termcolor=True
+try:
+    from termcolor import colored
+except ImportError:
+    termcolor=False
 
 puredoi = True
 reverse_print_order = True
@@ -32,7 +35,12 @@ if reverse_print_order: numlist = numlist[::-1]
 print '==================='
 for i in numlist:
     print titles[i]
-    if authors[i]: print colored(authors[i].text,"yellow")
-    print colored(extras[i],"green")
-    print colored(doiurls[i],"blue")
+    if termcolor:
+        if authors[i]: print colored(authors[i].text,"yellow")
+        print colored(extras[i],"green")
+        print colored(doiurls[i],"blue")
+    else:
+        if authors[i]: print authors[i].text
+        print extras[i]
+        print doiurls[i]
     print '==================='
