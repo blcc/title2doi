@@ -1,0 +1,15 @@
+#!/bin/bash
+
+fmt=bibtex # apa harvard ris ieee mla vancouver chicago
+doi=$1
+wget -q -O - "http://search.crossref.org/citation?format=${fmt}&doi=http://dx.doi.org/${doi}" | sed -e "s/\t/    /" -e "s/^}/    }/" -e "s/_//1"
+echo
+
+# or 
+#'http://search.crossref.org/citation?format=bibtex&doi=http://dx.doi.org/10.1175/bams-89-3-347'
+#'http://search.crossref.org/citation?format=apa&doi=http://dx.doi.org/10.1175/bams-89-3-347'
+# other format: harvard ris ieee mla vancouver chicago
+
+# or use doi2bib (bibtex only)
+#http://www.doi2bib.org/doi2bib?id=10.1175/2010JAS3542.1
+#wget -q -O - http://www.doi2bib.org/doi2bib?id=${doi} | sed -e "s/\t/    /" -e "s/^}/    }/" -e "s/_//1"
