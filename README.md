@@ -30,3 +30,10 @@ Print matched article from last to first, so that the best one would be bottom.
 # Setting (doi2bib)
 In doi2bib, modify the fmt to the format you want. Here are available options: bibtex apa harvard ris ieee mla vancouver chicago
 bibtex is the default.
+
+# Troubleshooting
+If that does not work, you could give:
+```
+python retry.py
+```
+a shot. (The title is hardcoded in this file, so you can do a whole list at once).
