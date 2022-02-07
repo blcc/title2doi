@@ -27,6 +27,9 @@ reverse_print_order = True
 ```
 Print matched article from last to first, so that the best one would be bottom.
 
-# Setting (doi2bib)
+# Setting (doi2bib) (obsoleted)
 In doi2bib, modify the fmt to the format you want. Here are available options: bibtex apa harvard ris ieee mla vancouver chicago
 bibtex is the default.
+
+This script is no longer work now. Crossref has API for DOI. Please check the API url:
+https://www.crossref.org/documentation/retrieve-metadata/rest-api/
