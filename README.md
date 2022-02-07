@@ -32,4 +32,10 @@ In doi2bib, modify the fmt to the format you want. Here are available options: b
 bibtex is the default.
 
 This script is no longer work now. Crossref has API for DOI. Please check the API url:
+
 https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+
+Or try dx.doi.org:
+```
+curl -LH "Accept: text/bibliography; style=bibtex" http://dx.doi.org/10.5194/gmd-14-7073-2021
+```
